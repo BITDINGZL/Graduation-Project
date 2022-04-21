@@ -1,0 +1,11 @@
+#app{
+	width: 500px;
+	height: 500px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: auto;
+}
+#mid{
+	text-align: center;
+}

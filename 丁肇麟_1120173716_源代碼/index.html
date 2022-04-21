@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试</title>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+	</head>
+	<body>
+		<script src="vue.js"></script>
+		<script src="axios.min.js"></script>
+		<div id="app">
+			<div id="mid">
+				<div id="train_model">
+					<div id="batch_size">
+						batch_sizes: <input type="text" id="text1" v-model="temp.batchsize"/>
+					</div>
+					<div id="epochs">
+						epochs: <input type="text" id="text2" v-model="temp.epochs"/>
+					</div>
+					<div id="learning-rate">
+						learning-rate: <input type="text" id="text3" v-model="temp.lr"/>
+					</div>
+					<div id="decay">
+						decay: <input type="text" id="text4" v-model="temp.decay"/>
+					</div>
+					<br>
+					<input type="button" id="TJ" @click="trainLB" value="用联邦学习训练" />
+					<input type="button" id="TJ" @click="trainNN" value="用神经网络训练" />
+				</div>
+				<br>
+				<div id="res" v-show="res!=0">{{res}}</div>
+				<br>
+				<div id="age">
+					age: <input type="text" id="text2" v-model="temp2.age"/>
+				</div>
+				<div id="bf">
+					bf: <input type="text" id="text2" v-model="temp2.bf"/>
+				</div>
+				<div id="hz">
+					hz: <input type="text" id="text2" v-model="temp2.hz"/>
+				</div>
+				<div id="jl">
+					jl: <input type="text" id="text2" v-model="temp2.jl"/>
+				</div>
+				<div id="tj">
+					tj: <input type="text" id="text2" v-model="temp2.tj"/>
+				</div>
+				<div id="dc">
+					dc: <input type="text" id="text2" v-model="temp2.dc"/>
+				</div>
+				<div id="yz">
+					yz: <input type="text" id="text2" v-model="temp2.yz"/>
+				</div>
+				<div id="mb">
+					mb: <input type="text" id="text2" v-model="temp2.mb"/>
+				</div>
+				<div id="eeg">
+					eeg: <input type="text" id="text2" v-model="temp2.eeg"/>
+				</div>
+				<br>
+				<input type="button" id="ts" @click="test" value="获得建议" />
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html> 
